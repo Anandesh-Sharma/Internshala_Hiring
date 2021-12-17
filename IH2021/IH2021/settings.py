@@ -12,6 +12,20 @@ BOT_NAME = 'IH2021'
 SPIDER_MODULES = ['IH2021.spiders']
 NEWSPIDER_MODULE = 'IH2021.spiders'
 
+# To rotate proxy, install scrapy-rotating-proxies package and 
+# specify the proxy IP and port
+# (from  https://www.freeproxylists.net/?c=US&pr=HTTPS)
+# in ROTATING_PROXY_LIST below.
+''' 
+DOWNLOADER_MIDDLEWARES = {
+'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
+}
+ROTATING_PROXY_LIST = [
+'207.135.200.92:6746',
+'66.23.232.84:3128'
+]
+'''
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'IH2021 (+http://www.yourdomain.com)'
 
